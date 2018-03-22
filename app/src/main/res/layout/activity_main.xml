@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_root"
+    tools:context="com.hk.keyboarddemo.MainActivity"
+    android:background="#ffffff">
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard_father"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:background="#f9fafa"
+        android:paddingBottom="@dimen/y20"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_hide_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y60"
+            android:background="#eeeeee"
+            android:layout_marginBottom="@dimen/y20">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/jianpan_shouhui"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/kv_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:keyBackground="@drawable/keyboard_selector"
+            android:keyTextColor="#000000"
+            android:keyTextSize="16sp"
+            android:shadowRadius="0.0"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
